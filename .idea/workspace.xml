@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="fc407a35-8f64-44ab-a244-a60873411773" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Week9_day2/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week9_day2/Graph.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Week9_day2/GraphProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week9_day2/GraphProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Week9_day2/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Week9_day2/Vertex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/week9_miniproject/Employeee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/week9_miniproject/Employeee.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +59,7 @@
       <recent name="Week9_day2" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DEMO">
+  <component name="RunManager" selected="Application.GraphProcessor">
     <configuration name="DEMO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="week9.day1.lecture.DEMO" />
       <module name="week8day5" />
@@ -76,6 +79,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="week8.day5af.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GraphProcessor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Week9_day2.GraphProcessor" />
+      <module name="week8day5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Week9_day2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -111,6 +127,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GraphProcessor" />
         <item itemvalue="Application.DEMO" />
         <item itemvalue="Application.ExerciseOne" />
         <item itemvalue="Application.Util" />
@@ -126,7 +143,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698398006704</updated>
-      <workItem from="1698398007823" duration="35081000" />
+      <workItem from="1698398007823" duration="39479000" />
     </task>
     <servers />
   </component>

@@ -23,9 +23,27 @@ public class GraphProcessor {
         Set<Vertex> visited = new HashSet<>();
         Queue<Vertex> store = new LinkedList<>();
         visited.add(start);
+        store.add(start);
         while(!store.isEmpty()){
-            store.add(start);
+            Vertex current= store.poll();
+            System.out.print(current + " ");
+            for (Vertex n:graph.getNeigbours(current))   {
+                if (!visited.contains(n)){
+                    visited.add(n);
+                    store.add(n);
+                }
+            }
         }
 
+    }
+    public static void main(String[] args){
+        Graph graf = new Graph();
+        graf.addVertex("Bob");
+        graf.addVertex("Bo");
+        graf.addVertex("B");
+        graf.addEdge("Bob","Bo" );
+        graf.addEdge("Bob","B" );
+        graf.addEdge("B","Bo" );
+        graf.bfs(graf, new Vertex("Bob"));
     }
 }

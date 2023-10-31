@@ -1,10 +1,23 @@
 package week9_miniproject;
 
+import java.util.Date;
 import java.util.Objects;
 
 public class Employeee {
     private String name,  departament, jobTitle;
     private int id, managerId;
+    private Date date;
+    private int salary;
+
+    public Employeee(String name, String departament, String jobTitle, int id, int managerId, Date date, int salary) {
+        this.name = name;
+        this.departament = departament;
+        this.jobTitle = jobTitle;
+        this.id = id;
+        this.managerId = managerId;
+        this.date = date;
+        this.salary = salary;
+    }
 
     public Employeee(String name, String departament, String jobTitle, int id, int managerId) {
         this.name = name;
@@ -50,6 +63,26 @@ public class Employeee {
         return departament;
     }
 
+    public void setDepartament(String departament) {
+        this.departament = departament;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public int getSalary() {
+        return salary;
+    }
+
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+
     @Override
     public String toString() {
         return "Employeee{" +
@@ -58,6 +91,8 @@ public class Employeee {
                 ", jobTitle='" + jobTitle + '\'' +
                 ", id=" + id +
                 ", managerId=" + managerId +
+                ", date=" + date +
+                ", salary=" + salary +
                 '}';
     }
 

@@ -22,4 +22,22 @@ public class Graph {
     }
     //exercise2
 
+    public void bfs(Graph graph,  Vertex start){
+        Set<Vertex> visited = new HashSet<>();
+        Queue<Vertex> store = new LinkedList<>();
+        visited.add(start);
+        store.add(start);
+        while(!store.isEmpty()){
+            Vertex current= store.poll();
+            System.out.print(current + " ");
+            for (Vertex n:graph.getNeigbours(current))   {
+                if (!visited.contains(n)){
+                    visited.add(n);
+                    store.add(n);
+                }
+            }
+        }
+
+    }
+
 }
