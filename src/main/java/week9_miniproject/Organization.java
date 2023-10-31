@@ -1,5 +1,7 @@
 package week9_miniproject;
 
+import java.util.Objects;
+
 public class Organization {
     class Node {
         Employeee value;
@@ -10,6 +12,19 @@ public class Organization {
             this.value = value;
             left = null;
             right = null;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Node node = (Node) o;
+            return Objects.equals(value, node.value);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(value);
         }
     }
 
@@ -47,4 +62,5 @@ public class Organization {
             else return right;
         }
     }
+
 }
