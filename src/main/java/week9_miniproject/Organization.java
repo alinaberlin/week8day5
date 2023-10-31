@@ -33,4 +33,18 @@ public class Organization {
             }
         }
     }
+    private Node findLowestCommonManager(Node root, Node node1, Node node2) {
+        if (root == null || root == node1 || root == node2) return root;
+        // Recursively check left side and right side
+        Node left = findLowestCommonManager(root.left, node1, node2);
+        Node right = findLowestCommonManager(root.left, node1, node2);
+        // If both left and right is available, then we have found it. Return the current root.
+        if (left != null && right != null) return root;
+
+            // Otherwise let parent know that what we have currently, because the LCA is higher up the tree
+        else {
+            if(left!=null) return left;
+            else return right;
+        }
+    }
 }
