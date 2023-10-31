@@ -23,8 +23,8 @@ public class GraphProcessor {
         Set<Vertex> visited = new HashSet<>();
         Queue<Vertex> store = new LinkedList<>();
         visited.add(start);
-        store.add(start);
         while(!store.isEmpty()){
+            store.add(start);
         }
 
     }
