@@ -1,5 +1,7 @@
 package week9_miniproject;
 
+import java.util.Objects;
+
 public class Employeee {
     private String name,  departament, jobTitle;
     private int id, managerId;
@@ -44,6 +46,10 @@ public class Employeee {
         this.name = name;
     }
 
+    public String getDepartament() {
+        return departament;
+    }
+
     @Override
     public String toString() {
         return "Employeee{" +
@@ -53,5 +59,18 @@ public class Employeee {
                 ", id=" + id +
                 ", managerId=" + managerId +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Employeee employeee = (Employeee) o;
+        return getId() == employeee.getId();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId());
     }
 }
