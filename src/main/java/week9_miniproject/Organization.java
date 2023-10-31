@@ -62,5 +62,8 @@ public class Organization {
             else return right;
         }
     }
+    public Employeee findComunManager(Employeee employee1, Employeee employee2 ){
+        return findLowestCommonManager(manager, new Node(employee1), new Node(employee2 )).value;
 
+    }
 }
