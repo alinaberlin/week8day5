@@ -88,5 +88,17 @@ public class Organization {
                 levels.get(levelCurrent).add(current.value);
             }
        }
+        levels.values().forEach(el -> {
+            el.forEach(e ->System.out.print(e.getName()));
+            System.out.println();
+        });
+    }
+    public static void main(String[] args){
+        Organization organization = new Organization();
+        organization.add(new Employeee("Alina", "Manager", "Manager QA", 1, -1));
+        organization.add(new Employeee("Alina2", "QA", "QA", 1, -1));
+        organization.add(new Employeee("Alina3", "QA", "QA", 1, -1));
+        organization.add(new Employeee("Alina4", "QA", "QA", 1, -1));
+        organization.displayHerarchy();
     }
 }
