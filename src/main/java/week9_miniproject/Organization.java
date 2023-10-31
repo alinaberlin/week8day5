@@ -1,5 +1,8 @@
 package week9_miniproject;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Objects;
 
 public class Organization {
@@ -65,5 +68,25 @@ public class Organization {
     public Employeee findComunManager(Employeee employee1, Employeee employee2 ){
         return findLowestCommonManager(manager, new Node(employee1), new Node(employee2 )).value;
 
+    }
+    public void displayHerarchy(){
+        HashMap<Integer, List<Employeee>> levels = new HashMap<Integer, List<Employeee>>();
+        int levelCurrent = 0;
+       levels.put(levelCurrent, new ArrayList<>());
+       levels.get(levelCurrent).add(manager.value);
+        Node current = manager;
+        while(current != null){
+            current = current.left;
+            levelCurrent = levelCurrent+1;
+            if (current != null) {
+               levels.putIfAbsent(levelCurrent, new ArrayList<>());
+               levels.get(levelCurrent).add(current.value);
+            }
+            current = current.right;
+            if (current != null) {
+                levels.putIfAbsent(levelCurrent, new ArrayList<>());
+                levels.get(levelCurrent).add(current.value);
+            }
+       }
     }
 }
